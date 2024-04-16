@@ -7,6 +7,5 @@ export default async function handler(req, res) {
   );
   const { data, error } = await supabase.from("projects").select();
 
-  // res.status(200).json({ projects: data });
-  return Response.json({ data });
+  return res.status(200).json({ projects: data });
 }
